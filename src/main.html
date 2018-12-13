@@ -1,0 +1,2277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/top.css" />
+        <link rel="stylesheet" type="text/css" href="css/nav.css" />
+        <link rel="stylesheet" type="text/css" href="css/banner.css" />
+        <link rel="stylesheet" type="text/css" href="css/aside.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="lib/jquery-1.10.1.min.js" type="text/javascript"></script>
+        <script src="js/common.js" type="text/javascript"></script>
+        <script src="js/aside.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- 侧边栏外盒子 -->
+        <div id="aside">
+            <!-- 定位侧边栏和购物车栏的盒子 -->
+            <div class="aside">
+                <!-- 侧边栏 -->
+                <div class="sidenav">
+                    <ul>
+                        <li class='car'><s></s>购物车0件</li>
+                        <li class='collection'><s></s>我的收藏</li>
+                        <li class='wx'><s></s>
+                            <div>
+                                <div class="wxpic">
+                                    <img src="img/wx.png"/>
+                                </div>
+                                <p>加微信享受更多优惠<br/>ID：kdlyao</p>
+                            </div>
+                        </li>
+                        <li class='advise'><s></s>投诉建议</li>
+                        <li class='returntop'><s></s>返回顶部</li>
+                    </ul>
+                </div>
+                <!-- 购物车栏 -->
+                <div class="sidecar">
+                    <!-- mybuy -->
+                    <div class='mybuy'>
+                        <p>购物车<span>（0件）</span><s class='close'></s></p>
+                        <div class="carbottom">
+                            <p>查看购物车全部产品>></p>
+                            <ul class='goods_scroll'>
+                                <!-- 购物车栏里的商品，ajax渲染 -->
+                                <!-- <li>
+                                    <div class="gpic fl">
+                                        <img src="img/goodlist1.jpg"/>
+                                    </div>
+                                    <div class='goodname'>急支糖浆</div>
+                                    <div class='goodprice'>单价：￥<span>26.80</span></div>
+                                    <div class='goodtotal'>
+                                        <div class="number fl">
+                                            <div class='sub'> </div>
+                                            <input type="text"/>
+                                            <div class='add'></div>
+                                        </div>
+                                        <div class='pricetotal fl'>￥358.00</div>
+                                    </div>
+                                    <div class="goodclose"></div>
+                                </li> -->
+
+
+
+                            </ul>
+                            <div class='price'>
+                                <p>购物车内共XX件商品</p>
+                                <p>总价：<span>xxx元</span></p>
+                                <div class="btn">去购物车结算</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mycollection -->
+                    <div class='mycollection' style='display:none'>
+                        <p>我的收藏<span>（0件）</span><s class='close'></s></p>
+                        <div class="carbottom">
+                            <p>查看收藏全部产品>></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 头部top -->
+        <div id="top">
+            <div class="top con">
+                <div class="top_left fl">
+                    <a href="">收藏康德乐</a>
+                    <em>您好，欢迎来到康德乐大药房!</em>
+                    <a href="html/login.html" class='member'>登录</a>
+                    <a href="html/reg.html" class='member'>免费注册</a>
+                </div>
+                <div class="top_right fr">
+                    <div class="menu">
+                        <a href="#" class='mymenu'>我的康德乐<s></s></a>
+                        <ul class='mymenu_hiden'>
+                            <li>我的康德乐<s></s></li>
+                            <li>我的订单</li>
+                            <li>我的收藏</li>
+                            <li>收货地址</li>
+                        </ul>
+                    </div>
+                    <i>|</i>
+                    <a href="#">帮助中心</a>
+                    <i>|</i>
+                    <a href="#" class='phone'><s></s>手机版</a>
+                    <i>|</i>
+                    <div class="webnav">
+                        <a href="#" class="mywebnav">网站导航<s></s></a>
+                        <ul class='mywebnav_hiden'>
+                            <li>网站导航<s></s></li>
+                            <li>药品类目</li>
+                            <li>查找药品</li>
+                            <li>门店查询</li>
+                            <li>品牌合作</li>
+                        </ul>
+                        
+                    </div>
+                    <i>|</i>
+                    <span>互联网药品交易资格证 粤C20160028</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 头部盒子header_box -->
+        <div id="header_box">
+            <div class="header_box con">
+                <div class="head_left_logo">
+                    <img src="img/kfl_left_logo.jpg" title='百济网上药店-网上买药上百济药房网'/>
+                    <img src="img/logo_left_phone.gif" alt="" />
+                </div>
+                <div class="search">
+                    <div class="search_top">
+                        <input type="text" /><input type="text" value='搜索'/>
+                    </div>
+                    <div class="search_hot">
+                        <ul>
+                            <li>热门搜索:</li>
+                            <li><a href="#">复方万年青胶囊</a></li>
+                            <li><a href="#">芭克硅胶软膏</a></li>
+                            <li><a href="#">人血白蛋白</a></li>
+                            <li><a href="#">恩替卡韦</a></li>
+                            <li><a href="#">金戈</a></li>
+                            <li><a href="#">必利劲</a></li>
+                            <li><a href="#">七十味珍珠丸</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="head_right fr">
+                    <div class="head_right_cart">
+                        <div class='head_myaccount'>
+                            <a href="#">登录</a>
+                            <a href="#">免费注册</a>
+                        </div>
+                        <div class='head_mycard'>
+                            <a href="#">购物车<strong class='num'>0</strong>件</a>
+                        </div>
+                    </div>
+                    <img src="img/kfl_right_logo.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 导航 -->
+        <div id="nav">
+            <div class="nav con">
+                <!-- 左：商品分类 -->
+                <div class="head_categorys fl">
+                    <h2>
+                        <a href="#">全部商品分类</a>
+                        <em></em>
+                    </h2>
+                    <div class="allsort">
+                        <!-- 一级菜单 -->
+                        <ul class="firstmenu">
+                            <li class="firstitem"><a href="#">肿瘤科用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">肝科病用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">皮肤性病用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">神经科用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">心脑血管科用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">泌尿生殖科用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">精神科用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">糖尿病科用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">风湿免疫科用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">妇儿科/母婴用品</a><s></s></li>
+                            <li class="firstitem"><a href="#">医疗护理器械</a><s></s></li>
+                            <li class="firstitem"><a href="#">眼科用药</a><s></s></li>
+                            <li class="firstitem"><a href="#">消化科</a><s></s></li>
+                            <li class="firstitem"><a href="#">家庭常备</a><s></s></li>
+                            <li class="firstitem"><a href="#">罕见病</a><s></s></li>
+                            <li class="firstitem"><a href="#">肾内科</a><s></s></li>
+                            <li class="firstitem"><a href="#">呼吸疾病科</a><s></s></li>
+                            
+                        </ul>
+                        <!-- 二级菜单 -->
+                        <ul class="secondmenu">
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">免疫调节</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="seconditem">
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="disease">
+                                    <dl>
+                                        <dd class='ltil'><a href="#">肝癌</a></dd>
+                                        <dd class='lcon'>
+                                            <a href="#">多吉美</a>
+                                            <a href="#">肝复乐片</a>
+                                            <a href="#">化癌回生口服液</a>
+                                            <a href="#">肝复乐胶囊</a>
+                                            <a href="#">复方万年青胶囊</a>
+                                            <a href="#">金龙胶囊</a>
+                                            <a href="#">金克</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 右：首页导航 -->
+                <div class="head_naigation fl">
+                    <ul>
+                        <li><a href="">首页</a></li>
+                        <li class='specialtyChannel'>
+                            <a href="">专科频道</a><em></em>
+                            <ul class='channel'>
+                                <li>男科频道</li>
+                                <li>肝病频道</li>
+                                <li>肿瘤频道</li>
+                                <li>糖尿病频道</li>
+                                <li>两性频道</li>
+                                <li>脱发频道</li>
+                            </ul>
+                        </li>
+                        <li><a href="">健康讲堂</a></li>
+                        <li class='informationChannel'>
+                            <a href="">资讯频道</a><em></em>
+                            <ul class='channel'>
+                                <li>健康咨询</li>
+                                <li>行业咨询</li>
+                                <li>药师博客</li>
+                                <li>用药问答</li>
+                            </ul>
+                        </li>
+                        <li><a href="">了解我们</a></li>
+                        <li><a href="">慈善赠药</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+
+        <!-- 轮播图 -->
+        <div id="banner">
+            <div class="banner con">
+                <div class="banner_left">
+                    <!-- 左轮播：图片 -->
+                    <div class="bl_box">
+                        <ul class='picshow'>
+                            <li><img src="img/broadcast1.jpg"/></li>
+                            <li><img src="img/broadcast2.jpg"/></li>
+                            <li><img src="img/broadcast3.jpg"/></li>
+                            <li><img src="img/broadcast4.jpg"/></li>
+                            <li><img src="img/broadcast5.jpg"/></li>
+                            <li><img src="img/broadcast6.jpg"/></li>
+                            <li><img src="img/broadcast7.jpg"/></li>
+                        </ul>
+                        <ul class='spanshow'>
+                            <li class='active'></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="btn">
+                            <span class="btn_left"></span>
+                            <span class="btn_right"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右选项卡：地址 -->
+                <div class="banner_right">
+                    <p>康德乐大药房全国专科连锁直营门店一览</p>
+                    <!-- ajax数据渲染，高亮第一个 -->
+                    <div class='city'>
+                        <ul class='clearfix'>
+                            <li class='cur'>广州越秀</li>
+                            <li>广州海珠</li>
+                            <li>广州荔湾</li>
+                            <li>北京海淀</li>
+                            <li>北京朝阳</li>
+                            <li>成都青羊</li>
+                            <li>成都百济</li>
+                            <li>上海徐汇</li>
+                        </ul>
+                    </div>
+                    <!-- ajax数据渲染，生成第一个城市信息 -->
+                    <div class='cityInf'>
+                        <div class="cityImg">
+                            <!-- 地址图片 -->
+                            <ul class='cI' style='display:block'>
+                                <li><img src="img/city/1.gzyx/gzyx1-01.jpg"/></li>
+                                <li><img src="img/city/1.gzyx/gzyx1-02.jpg"/></li>
+                            </ul>
+                            <ul class='cI'>
+                                <li><img src="img/city/2.gzhz/zh-01.jpg"/></li>
+                                <li><img src="img/city/2.gzhz/zh-02.jpg"/></li>
+                            </ul>
+                            <ul class='cI'>
+                                <li><img src="img/city/3.gzlw/gzlw-01.jpg"/></li>
+                                <li><img src="img/city/3.gzlw/gzlw-02.jpg"/></li>
+                            </ul>
+                            <ul class='cI'>
+                                <li><img src="img/city/4.bjhd/bjhd-01.jpg"/></li>
+                                <li><img src="img/city/4.bjhd/bjhd-02.jpg"/></li>
+                            </ul>
+                            <ul class='cI'>
+                                <li><img src="img/city/5.bjcy/bjcy-01.jpg"/></li>
+                                <li><img src="img/city/5.bjcy/bjcy-02.jpg"/></li>
+                            </ul>
+                            <ul class='cI'>
+                                <li><img src="img/city/6.cdqy/cdqy-01.jpg"/></li>
+                                <li><img src="img/city/6.cdqy/cdqy-02.jpg"/></li>
+                            </ul>
+                            <ul class='cI'>
+                                <li><img src="img/city/7.cdbj/cdbj-01.jpg"/></li>
+                                <li><img src="img/city/7.cdbj/cdbj-02.jpg"/></li>
+                            </ul>
+                            <ul class='cI'>
+                                <li><img src="img/city/8.shxh/shxh-01.jpg"/></li>
+                                <li><img src="img/city/8.shxh/shxh-02.jpg"/></li>
+                            </ul>
+                            <!-- 按钮 -->
+                            <ul class='cIbtn'>
+                                <li class='cIbtn_left'></li>
+                                <li class='cIbtn_right'></li>
+                            </ul>
+                        </div>
+                        <!-- 地址信息 -->
+                        <div class="cityAddr">
+                            <p class="phone">0532-85721232，18561717851</p>
+                            <p class="opentime">（8:30-17:00，每天）</p>
+                            <p class="addr"><s></s>山东省青岛市市南区漳州一路22号</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 内容 -->
+        <div id="content">
+            <div class="content con">
+                <!-- 选项卡 -->
+                <div class="conleft fl">
+                    <div class="cltop">
+                        <ul class="clearfix">
+                            <li class='active'>特价抢购</li>
+                            <li>热卖商品</li>
+                            <li>热评新品</li>
+                            <li>新品上架</li>
+                        </ul>
+                    </div>
+                    <div class="clbottom">
+                        <!-- 选项卡嵌套 -->
+                        <div class="clb_tab" style='display:block'>
+                            <ul class="clearfix">
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist1.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist1.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist1.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist1.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clb_tab">
+                            <ul class="clearfix">
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/good1.jpg" height="240" width="240"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/good1.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/good1.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/good1.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clb_tab">
+                            <ul class="clearfix">
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist2.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist2.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist2.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist2.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clb_tab">
+                            <ul class="clearfix">
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist3.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist3.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist3.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='clb_tab_pic'>
+                                        <img src="img/goodlist3.jpg"/>
+                                    </div>
+                                    <div class='clb_tab_inf'>
+                                        <p>补佳乐</p>
+                                        <p>￥39.00</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="conright fr">
+                    <p>限时抢购</p>
+                    <!-- 轮播部分 -->
+                    <div class="cr_banner clearfix">
+                        <ul class='crb_good'>
+                            <li>
+                                <div>
+                                    <p>温经止痛膏</p>
+                                    <div>
+                                        <img src="img/good1.jpg"/>
+                                    </div>
+                                    <span>￥38.00</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>温经止痛膏</p>
+                                    <div>
+                                        <img src="img/goodlist1.jpg"/>
+                                    </div>
+                                    <span>￥38.00</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>温经止痛膏</p>
+                                    <div>
+                                        <img src="img/goodlist2.jpg"/>
+                                    </div>
+                                    <span>￥38.00</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>温经止痛膏</p>
+                                    <div>
+                                        <img src="img/goodlist3.jpg"/>
+                                    </div>
+                                    <span>￥38.00</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class='crb_span clearfix'>
+                            <li class='active'></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 频道 -->
+        <div id="channel">
+            <ul class="channel con">
+                <li>
+                    <div class='cinf'>
+                        <strong>男性专场</strong>
+                        <p>男科用药大全，保健养生</p>
+                        <span>进入男科频道</span>
+                    </div>
+                    <div class='cpic'>
+                        <img src="img/channelpic.jpg"/>
+                    </div>
+                </li>
+                <li>
+                    <div class='cinf'>
+                        <strong>男性专场</strong>
+                        <p>男科用药大全，保健养生</p>
+                        <span>进入男科频道</span>
+                    </div>
+                    <div class='cpic'>
+                        <img src="img/channelpic.jpg"/>
+                    </div>
+                </li>
+                <li>
+                    <div class='cinf'>
+                        <strong>男性专场</strong>
+                        <p>男科用药大全，保健养生</p>
+                        <span>进入男科频道</span>
+                    </div>
+                    <div class='cpic'>
+                        <img src="img/channelpic.jpg"/>
+                    </div>
+                </li>
+                <li>
+                    <div class='more'>
+                        <p>更多频道</p>
+                        <div>
+                            <span>癫痫频道</span>
+                            <span>关爱白癜风</span>
+                            <span>肝病频道</span>
+                            <span>肿瘤频道</span>
+                            <span>人血白蛋白</span>
+                            <span>默沙东</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 专场1 -->
+        <div id="floor">
+            <div class="floor con">
+                <p>1F 男性专场</p>
+                <div class="fbottom">
+                    <div class="fbleft fl">
+                        <div class="fblpic">
+                            <img src="img/fblpic.jpg"/>
+                        </div>
+                        <div class="fblnav">
+                            <ul>
+                                <li>男科频道</li>
+                                <li>男科频道</li>
+                                <li>男科频道</li>
+                                <li>男科频道</li>
+                                <li>男科频道</li>
+                                <li>男科频道</li>
+                                <li>男科频道</li>
+                                <li>男科频道</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fbright fr">
+                        <ul class='clearfix'>
+                            <!-- <li>
+                                <div class="fbrpic">
+                                    <img src="img/fbrpic.jpg" alt="" />
+                                </div>
+                                <div class="fbrinf">
+                                    <p>万艾可</p>
+                                    <p>￥465.00</p>
+                                </div>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li> -->
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 专场间隔 -->
+        <div id="between">
+            <div class="between con">
+                <img src="img/between.jpg" />
+            </div>
+        </div>
+
+        <!-- 专场2 -->
+        <div id="floor2">
+            <div class="floor2 con">
+                <p>2F 专科用药</p>
+                <div class="fb2ottom">
+                    <div class="fb2left fl">
+                        <div class="fb2lpic">
+                            <img src="img/fb2lpic.jpg"/>
+                        </div>
+                        <div class="fb2lnav">
+                            <ul>
+                                <li>人血白蛋白</li>
+                                <li>人血白蛋白</li>
+                                <li>人血白蛋白</li>
+                                <li>人血白蛋白</li>
+                                <li>人血白蛋白</li>
+                                <li>人血白蛋白</li>
+                                <li>人血白蛋白</li>
+                                <li>人血白蛋白</li>
+                                <li>人血白蛋白</li>
+                                <li>人血白蛋白</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fb2right fr">
+                        <ul class='clearfix'>
+                            <li>
+                                <div class="fb2rpic">
+                                    <img src="img/fbrpic.jpg" alt="" />
+                                </div>
+                                <div class="fb2rinf">
+                                    <p>万艾可</p>
+                                    <p>￥465.00</p>
+                                </div>
+                            </li>
+                            <!-- <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 专场间隔 -->
+        <div id="between">
+            <div class="between con">
+                <img src="img/between.jpg" />
+            </div>
+        </div>
+
+        <!-- 底部连接 -->
+        <div id="footernav">
+            <div class="footernav">
+                <div class="footerMode">
+                    <h3 class='fn1'>购物指南</h3>
+                    <ul>
+                        <li><a href="#">退换货流程</a></li>
+                        <li><a href="#">会员说明</a></li>
+                        <li><a href="#">订单管理</a></li>
+                        <li><a href="#">订购方式</a></li>
+                        <li><a href="#">订购流程</a></li>
+                        <li><a href="#">用户注册</a></li>
+                    </ul>
+                </div>
+                <div class="footerMode">
+                    <h3 class='fn2'>购物保障</h3>
+                    <ul>
+                        <li><a href="#">配送保障</a></li>
+                        <li><a href="#">直营连锁</a></li>
+                        <li><a href="#">GSP管理</a></li>
+                        <li><a href="#">7天退换货</a></li>
+                        <li><a href="#">合法资质</a></li>
+                        <li><a href="#">十年品牌</a></li>
+                    </ul>
+                </div>
+                <div class="footerMode">
+                    <h3 class='fn3'>支付方式</h3>
+                    <ul>
+                        <li><a href="#">网银/在线支付</a></li>
+                        <li><a href="#">银行汇款</a></li>
+                        <li><a href="#">货到付款</a></li>
+                    </ul>
+                </div>
+                <div class="footerMode">
+                    <h3 class='fn4'>配送服务</h3>
+                    <ul>
+                        <li><a href="#">冷藏易碎品说明</a></li>
+                        <li><a href="#">商品签收</a></li>
+                        <li><a href="#">快递查询</a></li>
+                        <li><a href="#">配送细则</a></li>
+                    </ul>
+                </div>
+                <div class="footerMode">
+                    <h3 class='fn5'>售后服务</h3>
+                    <ul>
+                        <li><a href="#">退换货流程</a></li>
+                        <li><a href="#">7天退换货</a></li>
+                        <li><a href="#">提供机打发票</a></li>
+                        <li><a href="#">全程用药服务</a></li>
+                    </ul>
+                </div>
+                <div class="footerMode">
+                    <h3 class='fn6'>关于我们</h3>
+                    <ul>
+                        <li><a href="#">商务伙伴</a></li>
+                        <li><a href="#">全国直营门店</a></li>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">招募供应商</a></li>
+                        <li><a href="#">人才招聘</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div id="footer">
+            <div class="footer">
+                <div class="inftop">
+                    <a href='#'>互联网药品交易服务资格证书</a>
+                    <a href='#'>互联网药品信息服务资格证书</a>
+                    <a href='#'>药品经营许可证</a>
+                    <a href='#'>食品经营许可证</a>
+                    <a href='#'>GSP认证证书</a>
+                    <a href='#'>公司营业执照</a>
+                    <a href='#'>执业药师证</a>
+                </div>
+                <div class="infbuttom">
+                    <div class="ibleft">
+                        <br />
+                        <p><a href="#" class='remarksNumber'>粤ICP备11004502号-3</a>  @2002~2015 <a href="#">百济新特网上药店</a> <a href="#">百济新特药房网</a> www.baiji.com.cn 版权所有，并保留所有权利</p>
+                        <p>广州百济新特药业连锁有限公司旗下的<a href="#">百济健康商城</a>是国内专业从事<a href="#">专科药品、日常药品、医疗器械、保健品销售</a>的正规<a href="#">网上药店</a></p>
+                        <p>本公司常年法律顾问： 广东信利盛达律师事务所</p>
+                        <p>本公司及客户的合法权益均受法律保护， 任何侵犯本公司及客户利益的任何单位和个人必将受到法律的追究 。</p>
+                    </div>
+                    <div class="ibright">
+                        <img src="img/police_1.jpg"/>
+                        <img src="img/police_2.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

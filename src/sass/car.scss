@@ -1,0 +1,362 @@
+@charset "utf-8";
+#carcon{
+    width: 100%;
+    .carcon{
+        width: 990px;
+        height: 90px;
+        background: url(../img/kfl_left_logo.jpg) no-repeat;
+        border-bottom: 1px solid #d0d0d0;
+    }
+    .cartitle{
+        width: 990px;
+        height: 50px;
+        line-height: 50px;
+        color: #555;
+        text-indent: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        p{
+            display: inline-block;
+            padding-left: 7px;
+            color: #e4393c;
+            font-size: 12px;
+            font-weight: normal;
+        }
+    }
+    .carlist{
+        width: 988px;
+        min-height: 100px;
+        border: 1px solid #dcdcdc;
+        .fieldName{
+            width: 100%;
+            height: 38px;
+            line-height: 38px;
+            background: #f6f6f6;
+            dl{
+                height: 38px;
+                dd{
+                    float: left;
+                    height: 100%;
+                    line-height: 38px;
+                    text-align: center;
+                    font-size: 14px;
+                    &.chk{
+                        width: 50px;
+                    }
+                    &.chk2{
+                        width: 94px;
+                    }
+                    &.goodname{
+                        width: 320px;
+                        text-align: left;
+                    }
+                    &.goodprice{
+                        width: 110px;
+                    }
+                    &.goodamount{
+                        width: 110px;
+                    }
+                    &.goodfav{
+                        width: 110px;
+                    }
+                    &.goodsum{
+                        width: 110px;
+                    }
+                    &.goodop{
+                        width: 50px;
+                    }
+                }
+            }
+        }
+        .list{
+            dl{
+                border-bottom: 1px solid #dcdcdc;
+                dd{
+                    float: left;
+                    height: 100%;
+                    line-height: 85px;
+                    text-align: center;
+                    font-size: 14px;
+                    margin: 7px 0;
+                    &.chk{
+                        width: 50px;
+                    }
+                    &.chk2{
+                        width: 94px;
+                        img{
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                    &.goodname{
+                        width: 320px;
+                        line-height: 20px;
+                        text-align: left;
+                        a{
+                            color: #0972b3;
+                            display: block;
+                            margin-top: 7px;
+                        }
+                        span{
+                            display: block;
+                            color: #a8a8a8;
+                            padding-top: 30px;
+                        }
+                    }
+                    &.goodprice{
+                        width: 110px;
+                    }
+                    &.goodamount{
+                        width: 92px;
+                        padding-top: 30px;
+                        padding-left: 16px;
+                        span{
+                            float: left;
+                            display: block;
+                            width: 15px;
+                            height: 15px;
+                            margin: 4px 5px 0 0;
+                            cursor: pointer;
+                            &.sub{
+                            background: url(../img/elves4.png) no-repeat -63px -92px;
+                            }
+                            &.add{
+                            background: url(../img/elves4.png) no-repeat -80px -92px;
+                            }
+                        }
+                        input{
+                            display: block;
+                            width: 35px;
+                            height: 20px;
+                            line-height: 20px;
+                            border: 1px solid #eee;
+                            text-align: center;
+                            float: left;
+                            margin-right: 5px;
+                        }
+                    }
+                    &.goodfav{
+                        width: 110px;
+                    }
+                    &.goodsum{
+                        width: 110px;
+                        color: #E4393C;
+                    }
+                    &.goodop{
+                        width: 50px;
+                        a{
+                            color: #0972b3;
+                        }
+                    }
+                }
+            }
+            .allitem{
+                background: #f6f6f6;
+                padding: 10px 0;
+                .aileft{
+                    width: 300px;
+                    line-height: 22px;
+                    margin-left: 20px;
+                    padding-left: 18px;
+                    font-size: 14px;
+                    background: url(../img/carclose.gif) no-repeat left 5px;
+                    a{
+                        margin-right: 20px;
+                        color: #0972b3;
+                    }
+                    em{
+                        color: #f00;
+                        padding: 0 6px;
+                    }
+                }
+                .airight{
+                    width: 260px;
+                    margin-right: 20px;
+                    ul{
+                        float: right;
+                        li{
+                            float: left;
+                            height: 25px;
+                            line-height: 25px;
+                            font-size: 14px;
+                            margin-right: 30px;
+                            em{
+                                color: #f00;
+                                padding: 0 6px;
+                            }
+                        }
+                    }
+                }
+            }
+            .total{
+                height: 45px;
+                background: #ebebeb;
+                ul{
+                    float: right;
+                    height: 45px;
+                    line-height: 45px;
+                    margin-right: 20px;
+                    font-size: 14px;
+                    li{
+                        float: left;
+                        &:nth-child(2){
+                            font-size: 20px;
+                            color: #E4393C;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .emptycar{
+        display: none;
+        width: 988px;
+        height: 98px;
+        border: #dcdcdc 1px solid;
+        .emptytips{
+            height: 98px;
+            padding-left: 341px;
+            background: url(../img/carlogo.png) no-repeat 250px 24px #f3f3f3;
+            p{
+                line-height: 98px;
+                font-size: 12px;
+                a{
+                    color: #005EA7;
+                }
+            }
+        }
+    }
+    .btn{
+        width: 990px;
+        height: 40px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        .gobuy{
+            float: right;
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            background: url(../img/gobuyBg.jpg) no-repeat left top;
+            margin: 5px 10px 0 0;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .balance{
+            float: right;
+            display: inline-block;
+            width: 135px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            cursor: not-allowed;
+            color: #fff;
+            background: #808080;
+            margin-top: 2px;
+            user-select: none;
+            &.active{
+                cursor: pointer;
+                background: url(../img/elves.png) no-repeat left -156px;
+            }
+        }
+    }
+}
+
+#footernav{
+    height: 162px;
+    padding: 20px 0 10px;
+    margin-top: 20px;
+    background: #f03b43;
+    .footernav{
+        margin: 0 auto;
+        width: 960px;
+        height: 100%;
+        .footerMode{
+            float: left;
+            width: 140px;
+            padding-right: 20px;
+            color: #fff;
+            h3{
+                height: 30px;
+                font-size: 16px;
+                font-weight: bold;
+                padding-left: 36px;
+                &.fn1{
+                    background: url(../img/footernav/fn1.gif) no-repeat;
+                }
+                &.fn2{
+                    background: url(../img/footernav/fn2.gif) no-repeat;
+                }
+                &.fn3{
+                    background: url(../img/footernav/fn3.gif) no-repeat;
+                }
+                &.fn4{
+                    background: url(../img/footernav/fn4.gif) no-repeat;
+                }
+                &.fn5{
+                    background: url(../img/footernav/fn5.gif) no-repeat;
+                }
+                &.fn6{
+                    background: url(../img/footernav/fn6.gif) no-repeat;
+                }
+            }
+            ul{
+                padding-left: 36px;
+                li{
+                    height: 22px;
+                    list-style-type: disc;
+                    a{
+                        font-size: 12px;
+                        color: #ffbec1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer{
+    .footer{
+        width: 960px;
+        margin: 0 auto;
+        border-top: 1px solid #d7d7d7;
+        .inftop{
+            height: 31px;
+            line-height: 31px;
+            text-align: center;
+            a{
+                color: #f03b43;
+                margin: 0 5px;
+                font-size: 12px;
+            } 
+        }
+        .infbuttom{
+            margin: 0 auto;
+            font-size: 12px;
+            .ibleft{
+                text-align: right;
+                display: inline-block;
+                width: 684px;
+                padding-left: 20px;
+                p{
+                    color: #656565;
+                    a{
+                        color: #656565;
+                        &.remarksNumber{
+                            color: #F03B43;
+                        }
+                    }
+                }
+            }
+            .ibright{
+                width: 160px;
+                float: right;
+                margin-right: 50px;
+                margin-top: 20px;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@charset "utf-8";
+#top{
+    height: 100px;
+    background: #fff;
+    box-shadow: 0 0 5px #888;
+    .top{
+        min-height: 95px;
+        .logoleft{
+            width: 330px;
+            margin-top: 5px;
+        }
+        .logoright{
+            margin-top: 5px;
+            width: 155px;
+            height: 90px;
+            padding-right: 210px;
+            background: url(../img/kfl_right_logo.jpg) no-repeat right center;
+            span{
+                display: block;
+                margin-top: 35px;
+                text-align: right;
+                font: 16px/150% Arial,Verdana,"宋体";
+                a{
+                    color: #ff5c4d;
+                }
+            }
+        }
+    }
+}
+
+#reg{
+    width: 460px;
+    min-height: 330px;
+    margin: 0 auto;
+    margin-top: 100px;
+    .reg{
+        margin-top: 50px;
+        margin: 0 auto;
+        width: 380px;
+        .regcon{
+            position: relative;
+            margin-top: 30px;
+            line-height: 42px;
+            min-height: 42px;
+            border: 1px solid #ddd;
+            .label{
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                color: #4e4e4e;
+                text-indent: 20px;
+                font-size: 15px;
+            }
+            input{
+                position: absolute;
+                top: 1px;
+                width: 235px;
+                height: 20px;
+                line-height: 20px;
+                padding: 10px 0;
+                border: none;
+            }
+            .check{
+                width: 26px;
+                height: 26px;
+                display: none;
+                position: absolute;
+                top: 9px;
+                right: 8px;
+                background: url(../img/elves2.png) no-repeat -478px -129px;
+            }
+            .errortip{
+                display: none;
+                width: 272px;
+                height: 20px;
+                padding-left: 20px;
+                line-height: 20px;
+                font-size: 12px;
+                color: #ff5c4b;
+                position: absolute;
+                top: 45px;
+                left: 0;
+                background: url(../img/elves2.png) no-repeat -486px -100px;
+            }
+        }
+        .btn{
+            width: 100%;
+            height: 42px;
+            background: #ff5c4d;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            line-height: 42px;
+            border-radius: 4px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+    }
+}
+
+// 首页、登录、注册共同部分
+#footer{
+    .footer{
+        width: 960px;
+        margin: 0 auto;
+        border-top: 1px solid #d7d7d7;
+        .inftop{
+            height: 31px;
+            line-height: 31px;
+            text-align: center;
+            a{
+                color: #f03b43;
+                margin: 0 5px;
+                font-size: 12px;
+            } 
+        }
+        .infbuttom{
+            margin: 0 auto;
+            font-size: 12px;
+            .ibleft{
+                text-align: right;
+                display: inline-block;
+                width: 684px;
+                padding-left: 20px;
+                p{
+                    color: #656565;
+                    a{
+                        color: #656565;
+                        &.remarksNumber{
+                            color: #F03B43;
+                        }
+                    }
+                }
+            }
+            .ibright{
+                width: 160px;
+                float: right;
+                margin-right: 50px;
+                margin-top: 20px;
+
+            }
+        }
+    }
+}

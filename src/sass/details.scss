@@ -1,0 +1,616 @@
+@charset "utf-8";
+body{
+    background: #f5f5f5;
+}
+
+#way{
+    height: 32px;
+    .way{
+        box-sizing: border-box;
+        height: 32px;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        p{
+            line-height: 32px;
+            padding-left: 40px;
+            font-size: 12px;
+            background: url(../img/elves4.png) no-repeat -130px -210px;
+            a{
+                padding: 0 5px;
+                color: #666;
+            }
+        }
+    }
+}
+
+.notice{
+    height: 35px;
+    line-height: 35px;
+    text-indent: 10px;
+    background: #fff;
+    font-size: 12px;
+    color: #888;
+}
+
+.adv{
+    margin-top: 10px;
+    img{
+        width: 403px;
+        float: left;
+        cursor: pointer;
+    }
+}
+
+#details{
+    margin-top: 10px;
+    .details{
+        .dtop{
+            background: #fff;
+            min-height: 660px;
+            .dtleft{
+                width: 400px;
+                min-height: 600px;
+                position: relative;
+                .goodpic{
+                    min-height: 474px;
+                    .gpbig{
+                        border: 1px solid #ccc;
+                        width: 398px;
+                        height: 398px;
+                        position: relative;
+                        >div{
+                            width: 398px;
+                            height: 398px;
+                            .slider{
+                                display: none;
+                                width: 100px;
+                                height: 100px;
+                                background: pink;
+                                opacity: 0.4;
+                                position: absolute;
+                                z-index: 20;
+                            }
+                            .original{
+                                width: 398px;
+                                height: 398px;
+                                width: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                            }
+                            &.enlarge{
+                                width: 398px;
+                                height: 398px;
+                                display: none;
+                                position: absolute;
+                                left: 408px;
+                                top: 0;
+                                overflow: hidden;
+                                z-index: 2;
+                                >img{
+                                    position: absolute;
+                                }
+                            }
+                        }
+                    }
+                    .gpsmall{
+                        width: 315px;
+                        height: 62px;
+                        margin: 12px auto;
+                        margin-bottom: 0;
+                        overflow: hidden;
+                        position: relative;
+                        >ul{
+                            position: absolute;
+                            top: 0;
+                            left: 1px;
+                            // 宽度通过jq设置
+                            >li{
+                                width: 60px;
+                                height: 60px;
+                                border: 1px solid #ccc;
+                                float: left;
+                                background: skyblue;
+                                &.active{
+                                    border-color: red;
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .gpbtn{
+                        margin: 0 20px;
+                        position: relative;
+                        span{
+                            position: absolute;
+                            display: block;
+                            width: 15px;
+                            height: 56px;
+                            line-height: 56px;
+                            text-align: center;
+                            font-size: 18px;
+                            left: 0;
+                            top: -58px;
+                            cursor: pointer;
+                            color: #999;
+                            background: #ececec;
+                            border-radius: 3px;
+                            font-family: "宋体";
+                            // 下按钮与上按钮相对水平方向定位
+                            &.gpbtnnext{
+                                left: auto;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+                .goodtips{
+                    padding: 20px;
+                    line-height: 20px;
+                    color: #787878;
+                    font-size: 12px;
+                }
+                .goodshare{
+                    padding: 0 20px;
+                    position: relative;
+                    .sharepic{
+                        line-height: 20px;
+                        span{
+                            padding-top: 3px;
+                            float: left;
+                            font-size: 14px;
+                            color: #666;
+                        }
+                        >ul>li{
+                            float: left;
+                            width: 17px;
+                            height: 17px;
+                            margin: 6px;
+                            cursor: pointer;
+                            &:nth-child(1){
+                                background: url(../img/share.png) no-repeat;
+                                position: relative;
+                                .more{
+                                    display: none;
+                                    position: absolute;
+                                    width: 226px;
+                                    height: 324px;
+                                    border: 1px solid rgb(233, 233, 233);
+                                    top: -327px;
+                                    left: 0px;
+                                    background: #fff;
+                                    cursor: text;
+                                    p{
+                                        height: 28px;
+                                        line-height: 28px;
+                                        font-size: 14px;
+                                        color: rgb(98, 98, 98);
+                                        padding: 0 5px;
+                                        font-weight: bold;
+                                        background: #f5f5f5;
+                                    }
+                                    ul{
+                                        padding: 5px 0;
+                                        li{
+                                            float: left;
+                                            width: 100px;
+                                            height: 28px;
+                                            line-height: 28px;
+                                            margin-left: 6px;
+                                            padding: 2px;
+                                            cursor: pointer;
+                                            text-indent: 31px;
+                                            font-size: 14px;
+                                            position: relative;
+                                            s{
+                                                width: 24px;
+                                                height: 24px;
+                                                display: inline-block;
+                                                background: url(../img/share.png) no-repeat 4px -2439px;
+                                                position: absolute;
+                                                top: 3px;
+                                                left: 3px;
+                                            }
+                                        }
+                                    }
+                                    div{
+                                        width: 216px;
+                                        padding: 0 5px;
+                                        height: 30px;
+                                        text-align: right;
+                                        font-size: 12px;
+                                        line-height: 30px;
+                                        color: rgb(153, 153, 153);
+                                        float: right;
+                                        position: relative;
+                                        cursor: pointer;
+                                        background: #f5f5f5;
+                                        s{
+                                            display: inline-block;
+                                            width: 17px;
+                                            height: 17px;
+                                            background: url(../img/share2.png) no-repeat;
+                                            position: absolute;
+                                            top: 7px;
+                                            right: 44px;
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                background: url(../img/share.png) no-repeat 0 -52px;
+                            }
+                            &:nth-child(3){
+                                background: url(../img/share.png) no-repeat 0 -104px;
+                            }
+                            &:nth-child(4){
+                                background: url(../img/share.png) no-repeat 0 -260px;
+                            }
+                            &:nth-child(5){
+                                background: url(../img/share.png) no-repeat 0 -208px;
+                            }
+                            &:nth-child(6){
+                                background: url(../img/share.png) no-repeat 0 -1612px;
+                            }
+                        }
+                    }
+                    .collection{
+                        display: block;
+                        position: absolute;
+                        top: 3px;
+                        right: 25px;
+                        height: 20px;
+                        line-height: 20px;
+                        padding: 0 10px;
+                        background: #ececec;
+                        color: #666;
+                        border-radius: 50px;
+                        font-size: 14px;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .dtright{
+                float: right;
+                width: 808px;
+                background: #fff;
+                .gooddt{
+                    width: 505px;
+                    height: 491px;
+                    padding: 20px 0 40px 26px;
+                    h1{
+                        min-height: 25px;
+                        line-height: 25px;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: #000;
+                        s{
+                            float: left;
+                            width: 42px;
+                            height: 20px;
+                            display: inline-block;
+                            margin: 4px 5px 0 0;
+                            background: url(../img/elves2.png) no-repeat -111px -252px;
+                        }
+                    }
+                    .favourable{
+                        line-height: 20px;
+                        font-size: 14px;
+                        margin-top: 15px;
+                        color: #ff4040;
+                    }
+                    .price{
+                        width: 420px;
+                        min-height: 48px;
+                        line-height: 48px;
+                        margin-top: 15px;
+                        background: url(../img/priceBg.jpg) no-repeat;
+                        color: #f54343;
+                        font-size: 18px;
+                        font-weight: bold;
+                        span{
+                            width: 60px;
+                            height: 18px;
+                            line-height: 18px;
+                            float: left;
+                            margin-top: 15px;
+                            padding-left: 15px;
+                            font-size: 14px;
+                            font-weight: normal;
+                            color: #000;
+                        }
+                    }
+                    .summary{
+                        font-size: 12px;
+                        color: #666;
+                        margin-top: 15px;
+                        min-height: 15px;
+                        .dtinf{
+                            line-height: 18px;
+                            padding: 4px 0;
+                            dt{
+                                width: 68px;
+                                float: left;
+                                color: #9b9b9b;
+                            }
+                            dd{
+                                float: left;
+                                margin-left: 5px;
+                            }
+                        }
+                        .speco{
+                            dt{
+                                margin-top: 10px;
+                                width: 68px;
+                                float: left;
+                                color: #9b9b9b;
+                            }
+                            dd{
+                                padding: 0 13px;
+                                line-height: 25px;
+                                float: left;
+                                border: 1px solid #ccc;
+                                margin: 6px 8px 2px 0;
+                                cursor: pointer;
+                                position: relative;
+                                &.number{
+                                    width: 67px;
+                                    float: left;
+                                    margin-top: 4px;
+                                    border: none;
+                                    input{
+                                        width: 46px;
+                                        height: 27px;
+                                        line-height: 27px;
+                                        border: 1px solid #ccc;
+                                        float: left;
+                                        margin-right: 2px;
+                                        margin-left: -14px;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        color: #555;
+                                    }
+                                    span{
+                                        float: left;
+                                        width: 15px;
+                                        height: 12px;
+                                        border: 1px solid #bbb;
+                                        margin-bottom: 1px;
+                                        &.add{
+                                            background: url(../img/elves2.png) no-repeat -250px -49px;
+                                        }
+                                        &.sub{
+                                            background: url(../img/elves2.png) no-repeat -250px -62px;
+                                        }
+                                    }
+                                }
+                                &.btn{
+                                    width: 150px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    background: #ff5c4d;
+                                    color: #fff;
+                                    font-size: 16px;
+                                    margin-left: 10px;
+                                    cursor: pointer;
+                                    border-radius: 2px;
+                                    border: none;
+                                    margin-top: -1px;
+                                    text-indent: -8px;
+                                    em{
+                                        float: left;
+                                        display: inline-block;
+                                        width: 24px;
+                                        height: 24px;
+                                        margin: 8px 0 0 14px;
+                                        background: url(../img/elves2.png) no-repeat -231px -11px;
+                                    }
+                                }
+                                b{
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    width: 15px;
+                                    height: 15px;
+                                    background: url(../img/elves2.png) no-repeat -485px -254px;
+                                }
+                                s{
+                                    position: absolute;
+                                    bottom: 9px;
+                                    right: 4px;
+                                    width: 7px;
+                                    height: 4px;
+                                    background: url(../img/elves2.png) no-repeat -445px -48px;
+                                }
+                                ul{
+                                    display: none;
+                                    position: absolute;
+                                    top: 27px;
+                                    left: -1px;
+                                    width: 254px;
+                                    min-height: 54px;
+                                    padding: 4px 5px 6px 4px;
+                                    border: 1px solid #eee;
+                                    background: #fff;
+                                    z-index: 2;
+                                    li{
+                                        float: left;
+                                        width: 82px;
+                                        height: 25px;
+                                        text-align: center;
+                                        cursor: pointer;
+                                        color: #666;
+                                        background: #f5f5f5;
+                                        margin: 2px 0 0 2px;
+                                        &.active{
+                                            color: #fff;
+                                            background: #ff7e6f;
+
+                                        }
+                                    }
+                                }
+                                &.active{
+                                    border-color: #ff7e6f;
+                                }
+                            }
+                        }
+                    }
+                    >ul{
+                        width: 485px;
+                        height: 32px;
+                        line-height: 32px;
+                        margin-left: 66px;
+                        >li{
+                            float: left;
+                            margin-right: 20px;
+                            color: #555;
+                            font-size: 12px;
+                            cursor: pointer;
+                            em{
+                                float: left;
+                                width: 17px;
+                                height: 17px;
+                                display: inline-block;
+                                background: url(../img/elves2.png) no-repeat -332px -49px;
+                                margin: 8px 3px 0 0;
+                            }
+                        }
+                    }
+                }
+                .goodaddr{
+                    float: right;
+                    width: 209px;
+                    height: 600px;
+                    padding: 0 20px;
+                    border-left: 1px solid #f2f2f2;
+                    margin-top: 20px;
+                    h2{
+                        height: 36px;
+                        line-height: 36px;
+                        font-size: 14px;
+                        border-bottom: 1px solid #f2f2f2;
+                        color: #101010;
+                        margin: -5px 0 15px;
+                    }
+                    .gatab{
+                        width: 209px;
+                        height: 515px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#other{
+    margin-top: 15px;
+    .other{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+#footernav{
+    height: 162px;
+    padding: 20px 0 10px;
+    margin-top: 20px;
+    background: #f03b43;
+    .footernav{
+        margin: 0 auto;
+        width: 960px;
+        height: 100%;
+        .footerMode{
+            float: left;
+            width: 140px;
+            padding-right: 20px;
+            color: #fff;
+            h3{
+                height: 30px;
+                font-size: 16px;
+                font-weight: bold;
+                padding-left: 36px;
+                &.fn1{
+                    background: url(../img/footernav/fn1.gif) no-repeat;
+                }
+                &.fn2{
+                    background: url(../img/footernav/fn2.gif) no-repeat;
+                }
+                &.fn3{
+                    background: url(../img/footernav/fn3.gif) no-repeat;
+                }
+                &.fn4{
+                    background: url(../img/footernav/fn4.gif) no-repeat;
+                }
+                &.fn5{
+                    background: url(../img/footernav/fn5.gif) no-repeat;
+                }
+                &.fn6{
+                    background: url(../img/footernav/fn6.gif) no-repeat;
+                }
+            }
+            ul{
+                padding-left: 36px;
+                li{
+                    height: 22px;
+                    list-style-type: disc;
+                    a{
+                        font-size: 12px;
+                        color: #ffbec1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer{
+    .footer{
+        width: 960px;
+        margin: 0 auto;
+        border-top: 1px solid #d7d7d7;
+        .inftop{
+            height: 31px;
+            line-height: 31px;
+            text-align: center;
+            a{
+                color: #f03b43;
+                margin: 0 5px;
+                font-size: 12px;
+            } 
+        }
+        .infbuttom{
+            margin: 0 auto;
+            font-size: 12px;
+            .ibleft{
+                text-align: right;
+                display: inline-block;
+                width: 684px;
+                padding-left: 20px;
+                p{
+                    color: #656565;
+                    a{
+                        color: #656565;
+                        &.remarksNumber{
+                            color: #F03B43;
+                        }
+                    }
+                }
+            }
+            .ibright{
+                width: 160px;
+                float: right;
+                margin-right: 50px;
+                margin-top: 20px;
+
+            }
+        }
+    }
+}
